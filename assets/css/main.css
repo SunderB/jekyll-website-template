@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 /* Import other helper CSS files */
-@import url("/assets/css/colours.css");
+@import url("colours.css");
 
 :root {
   --navbar-text-size: 12pt;
