@@ -17,6 +17,8 @@
 
   --footer-height: 60pt;
   --footer-vertical-padding: 20px;
+
+  --content-max-width: 1200px;
 }
 
 *{
@@ -67,7 +69,7 @@ div.container {
 .navbar ul {
   /* Layout */
   /* Make the navbar full width */
-  max-width: 1000px;
+  max-width: var(--content-max-width);
   height: 100%;
   /* Hide any overflowing elements */
   overflow: hidden;
@@ -293,7 +295,7 @@ textarea{
 }
 
 .full_width_section > .section_content {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: auto;
   text-align: left;
   overflow: hidden;
