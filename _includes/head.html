@@ -1,0 +1,28 @@
+<!--
+This is the website's head (NOT the header!)
+The <head> contains information about the website, and is the best place to
+include stylesheets and scripts
+-->
+<head>
+  <!--
+    # The title of the page:
+    Jekyll automagically replaces page.title with the title value specified
+    at the top of each page, so each page will have a unique title!
+  -->
+  <title>{{ site.title }} - {{ page.title }}</title>
+
+  <!--
+    # Site metadata
+    Jekyll fills in these values from the values in _config.yml
+  -->
+  <meta charset="utf-8">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Include CSS style sheets -->
+  <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+
+  <!-- Include and load any JS scripts -->
+
+</head>

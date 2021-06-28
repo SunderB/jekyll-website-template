@@ -1,0 +1,31 @@
+---
+layout: default
+title: Posts
+---
+
+<section class="full_width_section bg-grad-blue">
+  <div class="section_content">
+    <div class="column">
+      <h2>Blog</h2>
+      {% for post in site.posts %}
+        <article class="card">
+            <header>
+                <hgroup>
+                    <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                    <h4>{{ post.excerpt }}</h4>
+                </hgroup>
+            </header>
+            <div class="card-content">
+            </div>
+            <hr/>
+            <footer style="display: flex;">
+              <p style="text-align: right; flex: 1;"><img src="/assets/img/icons/octicons/clock-24.svg" height="18"/> {{ post.date }}</p>
+            </footer>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="column">
+      <!-- <p>Test test test</p> -->
+    </div>
+  </div>
+</section>

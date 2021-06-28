@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {% include head.html %}
+  <body>
+    <header>
+    {% include navbar.html %}
+    </header>
+
+    <main id="main_wrapper">
+      <div id="content">
+        <section id="main_section" class="post">
+          <header>
+            <h2>{{ page.title }}</h2>
+            <p style="text-align: right; flex: 1;"><img src="/assets/img/icons/octicons/clock-24.svg" height="18"/> {{ page.date }}</p>
+          </header>
+          <hr>
+          <main>
+            {{ content }}
+          </main>
+        </section>
+      </div>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

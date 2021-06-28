@@ -1,0 +1,161 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+title: Home
+---
+
+<section class="full_width_section bg-grad-red">
+  <div class="section_content">
+    <div class="column">
+      <h2>About me :)</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate neque vel lorem fermentum maximus. Nam pretium congue nulla, non maximus dui scelerisque quis. Etiam tempor ullamcorper sem ac condimentum. Vivamus sed erat consectetur, bibendum dui a, blandit urna. Curabitur ac porta nulla. Nullam et dui mauris. Vestibulum venenatis quis urna a tristique. Mauris id libero lacus. Proin cursus, orci sodales feugiat dignissim, massa odio fringilla arcu, vel dapibus ligula mi vitae enim. Maecenas orci risus, dapibus a bibendum at, eleifend non dolor. In eget consectetur turpis, at tincidunt nulla. In nec augue augue.</p>
+    </div>
+    <div class="column no_vert_margin">
+      <p>
+      <img src="assets/img/drawings/waving.png" alt="Me waving" style="width: 60%;"/>
+    </p>
+    </div>
+  </div>
+</section>
+
+<section class="full_width_section bg-grad-orange">
+  <div class="section_content">
+    <div class="column">
+      <p>Test test test</p>
+    </div>
+    <div class="column">
+      <h2>Projects I've contributed to</h2>
+      <p>
+        <ul>
+          <li><p>Project A</p></li>
+          <li><p>Project B</p></li>
+          <li><p>Project C</p></li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="full_width_section bg-grad-yellow">
+  <div class="section_content">
+    <div class="column">
+      <h2>Events I've participated in</h2>
+      <p>
+        <ul>
+          <li><p>Local Hack Day: Build & Share 2021</p></li>
+          <li><p>GMTK Game Jam 2021</p></li>
+        </ul>
+      </p>
+    </div>
+    <div class="column">
+      <img src="/assets/img/drawings/stickers.png" width="100%" alt="Event Swag/Stickers"/>
+    </div>
+  </div>
+</section>
+
+<section class="full_width_section bg-grad-green">
+  <div class="section_content">
+    <div class="column">
+      <!-- <p>Test test test</p> -->
+    </div>
+    <div class="column">
+      <h2>Projects</h2>
+      <p>
+        <article class="card">
+            <header>
+                <hgroup>
+                    <a href="https://github.com/SunderB/sb-atom-sonic-pi"><h3>sb-atom-sonic-pi</h3></a>
+                    <label>atom</label>
+                    <h4>A package for the <a href='https://atom.io'>Atom text editor</a> to interface with <a href='https://sonic-pi.net'>Sonic Pi</a>. Based on <a href='https://github.com/rkh/atom-sonic'>rkh/atom-sonic</a>. (May not be regularly maintained!)</h4>
+                </hgroup>
+            </header>
+            <div class="card-content">
+              {{ include.content }}
+            </div>
+            <hr/>
+            <footer style="display: flex;">
+              <p style="text-align: left; flex: 1;"><img src="/assets/img/icons/octicons/versions-24.svg" height="18" alt="Latest version"/> 1.0.0-beta.3</p>
+              <p style="text-align: right; flex: 1;"><img src="/assets/img/icons/octicons/clock-24.svg" height="18" alt="Last updated"/> 31 Jan 2021</p>
+            </footer>
+        </article>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="full_width_section bg-grad-blue">
+  <div class="section_content">
+    <div class="column">
+      <h2>Blog</h2>
+
+      {% for post in site.posts %}
+        <article class="card">
+            <header>
+                <hgroup>
+                    <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                    <h4>{{ post.excerpt }}</h4>
+                </hgroup>
+            </header>
+            <div class="card-content">
+            </div>
+            <hr/>
+            <footer style="display: flex;">
+              <p style="text-align: right; flex: 1;"><img src="/assets/img/icons/octicons/clock-24.svg" height="18"/> {{ post.date }}</p>
+            </footer>
+        </article>
+      {% endfor %}
+
+      <!-- <article class="card">
+          <header>
+              <hgroup>
+                  <a href="games/asteroids.html"><h3>Asteroids</h3></a>
+                  <h4>A little asteroids game made in Game Maker.</h4>
+              </hgroup>
+          </header>
+
+          <div class="card-content">
+
+          </div>
+
+          <hr/>
+
+          <footer style="display: flex;">
+            <p style="text-align: left; flex: 1;"><img src="/assets/img/icons/octicons/versions-24.svg" height="18"/> Latest Build: 16w46a</p>
+            <p style="text-align: right; flex: 1;"><img src="/assets/img/icons/octicons/clock-24.svg" height="18"/>14/11/2016</p>
+          </footer>
+      </article> -->
+    </div>
+    <div class="column">
+      <!-- <p>Test test test</p> -->
+    </div>
+  </div>
+</section>
+
+<!-- <section class="full_width_section bg-grad-purple">
+  <div class="section_content">
+    <div class="column">
+      <h2>Music</h2>
+      <p>Test test test</p>
+    </div>
+    <div class="column">
+      <p>Test test test</p>
+    </div>
+  </div>
+</section> -->
+
+<section class="full_width_section bg-grad-blue">
+  <div class="section_content">
+    <div class="column">
+      <h2>Socials</h2>
+      <ul>
+        <p><img src="/assets/img/logos/github.png" class="social-icon"/> GitHub: <a href="https://github.com/{{ site.github_username }}">@{{ site.github_username }}</a></p>
+        <p><img src="/assets/img/logos/twitter.png" class="social-icon"/> Twitter (rarely used): <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a></p>
+      </ul>
+    </div>
+    <div class="column">
+      <img src="/assets/img/drawings/speech-bubble.png" width="100%" alt="Speech bubble"/>
+    </div>
+  </div>
+</section>
